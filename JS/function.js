@@ -24,3 +24,18 @@ const mul = (a, b) => {return a * b};
 //* functions can be used as variables
 let result = add(10, 10);
 console.log(`The sum of 10 + 10 is ${result}`);
+
+//* function as expression
+const minus = function(a, b) {return a - b};
+let equation = minus(3, 9);
+console.log(equation);
+
+//* anonymous function
+const call = function() {
+  console.log('Helloooooooo');
+};
+call();
+
+//example of using it with arrow function
+const greet = () => console.log('Good day');
+greet();
