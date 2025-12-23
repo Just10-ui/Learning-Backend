@@ -4,7 +4,7 @@
 //- 2. Clean your Room
 //- 3. Feed the Fish
 
-function walkDog() {
+const walkDog = () => {
  return new Promise((resolve, reject) => {
   setTimeout(() => {
     const dog = true;
@@ -17,7 +17,7 @@ function walkDog() {
  }) 
 }
 
-function cleanRoom() {
+const cleanRoom = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const clean = true;
@@ -30,10 +30,10 @@ function cleanRoom() {
   })
 }
 
-function feedFish() {
+const feedFish = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      const feed = true;
+      const feed = false;
       if (feed) {
         resolve('You have feed the fish')
       } else {
@@ -43,9 +43,15 @@ function feedFish() {
   })
 }
 
-walkDog().then(value => {console.log(value); return cleanRoom()})
-       .then(value => {console.log(value); return feedFish()})
-       .then(value => {console.log(value); return setTimeout(() => {
-        console.log('Finished all task');
-       }, 3000)})
-       .catch(error => {console.log(error);})
+// walkDog().then(value => {console.log(value); return cleanRoom()})
+//        .then(value => {console.log(value); return feedFish()})
+//        .then(value => {console.log(value); return setTimeout(() => {
+//         console.log('Finished all task');
+//        }, 3000)})
+//        .catch(error => {console.log(error);})
+
+module.exports = {
+  walkDog,
+  cleanRoom,
+  feedFish
+};
